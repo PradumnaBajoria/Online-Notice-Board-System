@@ -5,7 +5,7 @@
     <title>Online Notice Board System</title>
 
     <!-- BOOTSTRAP FILE -->
-    <link rel="stylesheet" type = "text/>css" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type = "text/css" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
     <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
     <!-- CSS FILE -->
@@ -22,13 +22,24 @@
 
       </div>
       <div class="col-md-4">
-
+        
       </div>
     </div>
 
     <!--Login Section Starts-->
-    <section>
-      
+    <section id = "login_form">
+      <div class="row">
+        <div class="col-md-4 m-auto block">
+          <center><h4>Login Form</h4></center>
+
+          <form action="index.php" method="post">
+            <div class="">
+
+            </div>
+          </form>
+
+        </div>
+      </div>
     </section>
 
   </body>
