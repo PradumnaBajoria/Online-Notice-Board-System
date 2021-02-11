@@ -6,10 +6,10 @@
 
     <!-- BOOTSTRAP FILE -->
     <link rel="stylesheet" type = "text/css" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
-    <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <!-- <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script> -->
 
     <!-- CSS FILE -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type = "text/css" href="css/style1.css">
   </head>
   <body>
     <!--Header Section Starts-->
@@ -19,10 +19,9 @@
       </div>
       <div class="col-md-4">
         <h3>Online Notice Board System</h3>
-
       </div>
       <div class="col-md-4">
-        
+
       </div>
     </div>
 
@@ -33,14 +32,45 @@
           <center><h4>Login Form</h4></center>
 
           <form action="index.php" method="post">
-            <div class="">
-
+            <div class="form-group">
+              <label>Email Id : </label>
+              <input class="form-control" type = "text" name = "email" placeholder = "Enter Your Email">
             </div>
-          </form>
+            <div class="form-group">
+              <label>Password : </label>
+              <input class="form-control" type = "password" name = "password" placeholder = "Enter Your Password">
+            </div>
 
+            <button class = "btn btn-primary" type="submit" name="login">Login</button>
+
+          </form>
+          <a href="register.php">Click Here to Register</a>
         </div>
       </div>
     </section>
+
+    <?php
+
+    $connection = mysqli_connect("localhost", "root", "");
+    $db = mysqli_select_db($connection, "Online_Notice_System");
+
+    if(isset($_POST["login"])){
+      $query = "select * from users where email = '$_POST[email]' AND password = '$_POST[password]'";
+      $query_run = mysqli_query($connection, $query);
+
+      if(mysqli_num_rows($query_run)){
+        while($row = mysqli_fetch_assoc($query)){
+          echo "<script>window.location.href = 'user_dashboard.php'</script>";
+        }
+      }else{
+        echo "<script>alert('Login Failed : Check Email or password');
+        window.location.href = 'index.php';
+        </script>";
+      }
+
+    }
+
+    ?>
 
   </body>
 </html>

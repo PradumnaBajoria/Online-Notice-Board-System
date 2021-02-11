@@ -28,7 +28,7 @@ else if ($o == '/'){
 else if ($o == '%'){
 	echo $a%$b;
 }
-else 
+else
 	echo "Error";
 
 echo nl2br("\n");
