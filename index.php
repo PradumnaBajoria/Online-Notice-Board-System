@@ -51,15 +51,15 @@
 
     <?php
 
-    $connection = mysqli_connect("localhost", "root", "");
-    $db = mysqli_select_db($connection, "Online_Notice_System");
+    $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
+    //$db = mysqli_select_db($connection, "online_notice_system");
 
     if(isset($_POST["login"])){
       $query = "select * from users where email = '$_POST[email]' AND password = '$_POST[password]'";
       $query_run = mysqli_query($connection, $query);
 
       if(mysqli_num_rows($query_run)){
-        while($row = mysqli_fetch_assoc($query)){
+        while($row = mysqli_fetch_assoc($query_run)){
           echo "<script>window.location.href = 'user_dashboard.php'</script>";
         }
       }else{
