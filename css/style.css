@@ -8,3 +8,11 @@
 #login_form{
   padding-top: 75px;
 }
+
+#left_sidebar{
+  border-right: 2px solid black;
+}
+
+#dashboard{
+  margin-left: 25px;
+}

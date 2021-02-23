@@ -9,7 +9,7 @@
     <!-- <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script> -->
 
     <!-- CSS FILE -->
-    <link rel="stylesheet" type = "text/css" href="css/style1.css">
+    <link rel="stylesheet" type = "text/css" href="css/style.css">
   </head>
   <body>
     <!--Header Section Starts-->

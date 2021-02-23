@@ -9,7 +9,7 @@
     <!-- <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script> -->
 
     <!-- CSS FILE -->
-    <link rel="stylesheet" type = "text/css" href="css/style1.css">
+    <link rel="stylesheet" type = "text/css" href="css/style.css">
   </head>
   <body>
     <!--Header Section Starts-->
@@ -50,15 +50,15 @@
     </section>
 
     <?php
-
+    session_start();
     $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
     //$db = mysqli_select_db($connection, "online_notice_system");
 
     if(isset($_POST["login"])){
       $query = "select * from users where email = '$_POST[email]' AND password = '$_POST[password]'";
       $query_run = mysqli_query($connection, $query);
-
       if(mysqli_num_rows($query_run)){
+        $_SESSION['email'] = $_POST['email'];
         while($row = mysqli_fetch_assoc($query_run)){
           echo "<script>window.location.href = 'user_dashboard.php'</script>";
         }
