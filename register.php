@@ -42,13 +42,13 @@
             </div>
             <div class="form-group">
               <label>Branch : </label>
-              <select class="form-control" name="branch">
-                <option value="">Computer Science</option>
-                <option value="">Electronics</option>
-                <option value="">Mechanical</option>
-                <option value="">Electrical</option>
-                <option value="">Civil</option>
-                <option value="">Chemical</option>
+              <select class="form-control" name="branch" required>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Civil">Civil</option>
+                <option value="Chemical">Chemical</option>
 
               </select>
             </div>
@@ -75,7 +75,7 @@
     //$db = mysqli_select_db($connection, "Online_Notice_System");
 
     if(isset($_POST["register"])){
-      $query = "insert into users values(2, '$_POST[fname]', '$_POST[lname]', '$_POST[branch]', '$_POST[email]', '$_POST[password]')";
+      $query = "insert into users values('$_POST[fname]', '$_POST[lname]', '$_POST[branch]', '$_POST[email]', '$_POST[password]')";
       $query_run = mysqli_query($connection, $query);
       if($query_run){
         echo "<script>alert('Registration Sucessful : You may Login Now');

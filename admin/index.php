@@ -5,11 +5,11 @@
     <title>Online Notice Board System</title>
 
     <!-- BOOTSTRAP FILE -->
-    <link rel="stylesheet" type = "text/css" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
-    <!-- <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script> -->
+    <link rel="stylesheet" type = "text/css" href="../bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
     <!-- CSS FILE -->
-    <link rel="stylesheet" type = "text/css" href="css/style.css">
+    <link rel="stylesheet" type = "text/css" href="../css/style.css">
   </head>
   <body>
     <!--Header Section Starts-->
@@ -25,11 +25,11 @@
       </div>
     </div>
 
-    <!--Login Section Starts-->
+    <!--Admin Login Section Starts-->
     <section id = "login_form">
       <div class="row">
         <div class="col-md-4 m-auto block">
-          <center><h4>Login Form</h4></center>
+          <center><h4>Admin Login Form</h4></center>
 
           <form action="index.php" method="post">
             <div class="form-group">
@@ -44,7 +44,6 @@
             <button class = "btn btn-primary" type="submit" name="login">Login</button>
 
           </form>
-          <a href="register.php">Click Here to Register</a>
         </div>
       </div>
     </section>
@@ -55,13 +54,12 @@
     //$db = mysqli_select_db($connection, "online_notice_system");
 
     if(isset($_POST["login"])){
-      $query = "select * from users where email = '$_POST[email]' AND password = '$_POST[password]'";
+      $query = "select * from admin where email = '$_POST[email]' AND password = '$_POST[password]'";
       $query_run = mysqli_query($connection, $query);
       if(mysqli_num_rows($query_run)){
         $_SESSION['email'] = $_POST['email'];
         while($row = mysqli_fetch_assoc($query_run)){
-          $_SESSION['branch'] = $row['branch'];
-          echo "<script>window.location.href = 'user_dashboard.php'</script>";
+          echo "<script>window.location.href = 'admin_dashboard.php'</script>";
         }
       }else{
         echo "<script>alert('Login Failed : Check Email or password');

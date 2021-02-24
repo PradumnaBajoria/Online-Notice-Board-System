@@ -4,12 +4,15 @@
 	if(isset($_POST['update_profile'])){
 		$connection = mysqli_connect("localhost", "root", "", "online_notice_system");
 		$query = "update users set fname = '$_POST[fname]', lname = '$_POST[lname]', branch = '$_POST[branch]', email = '$_POST[email]', password = '$_POST[password]' where email = '$_SESSION[email]'";
-		$query_run = mysqli_connect($connection, $query);
+		$query_run = mysqli_query($connection, $query);
 
 		if($query_run){
-			echo "<script type = 'text/javascript'>alert(Profile Updated); window.location.href = 'user_dashboard.php'</script>";
+			echo "<script type = 'text/javascript'>
+			alert('Profile Updated');
+			window.location.href = 'user_dashboard.php'
+			</script>";
 		}else{
-			echo "<script type = 'text/javascript'>alert(Updation Failed); window.location.href = 'user_dashboard.php'</script>";
+			echo "<script type = 'text/javascript'>alert('Updation Failed'); window.location.href = 'user_dashboard.php'</script>";
 		}
 
 	}
@@ -22,7 +25,7 @@
 		<meta charset="utf-8">
 		<title>User Dashboard</title>
 		<!-- Bootstrap file -->
-		<script src="jQuery/juqery_latest.js" charset="utf-8"></script>
+		<script src="jQuery/jquery_latest.js" charset="utf-8"></script>
 		<link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
 		<script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
@@ -32,11 +35,11 @@
 
 		<script type="text/javascript">
       $(document).ready(function(){
-        $("#edit_profile_button").click(function(){
+        $("#edit-profile-button").click(function(){
           $("#main_content").load('edit_profile.php');
         });
 
-        $("#view_notice_button").click(function(){
+        $("#view-notice-button").click(function(){
           $("#main_content").load('view_notice.php');
         });
 
@@ -70,7 +73,7 @@
 					<b> <?php echo $_SESSION['email']; ?></b><hr>
 					<button type="button" class="btn btn-primary btn-block" id="edit-profile-button" name="edit">Edit Profile</button>
 					<button type="button" class="btn btn-primary btn-block" id="view-notice-button" name="view">View All Notice</button>
-					<a href="index.php" type="button" class="btn btn-success btn-block">Logout</a>
+					<a href="logout.php" type="button" class="btn btn-success btn-block">Logout</a>
 
 				</div>
 				<div class="col-md-8" id="main_content">
