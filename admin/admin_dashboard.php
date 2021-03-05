@@ -34,7 +34,7 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>User Dashboard</title>
+		<title>Admin Dashboard</title>
 		<!-- Bootstrap file -->
 		<script src="../jQuery/jquery_latest.js" charset="utf-8"></script>
 		<link rel="stylesheet" href="../bootstrap-4.6.0-dist/css/bootstrap.min.css">
@@ -56,6 +56,10 @@
 
         $("#view-notice-button").click(function(){
           $("#main_content").load('view_all_notice.php');
+        });
+
+				$("#view-reply-button").click(function(){
+          $("#main_content").load('view_all_reply.php');
         });
 
       });
@@ -89,7 +93,7 @@
 					<button type="button" class="btn btn-primary btn-block" id="edit-profile-button" name="edit">Edit Profile</button>
           <button type="button" class="btn btn-secondary btn-block" id="create-notice-button" name="edit">Create Notice</button>
           <button type="button" class="btn btn-primary btn-block" id="view-notice-button" name="view">View All Notice</button>
-          <button type="button" class="btn btn-secondary btn-block" id="view-reply-button" name="edit">View Reply</button>
+          <button type="button" class="btn btn-secondary btn-block" id="view-reply-button" name="reply">View All Reply</button>
 
 					<a href="logout.php" type="button" class="btn btn-success btn-block">Logout</a>
 

@@ -6,7 +6,7 @@
 
     <!-- BOOTSTRAP FILE -->
     <link rel="stylesheet" type = "text/css" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
-    <!-- <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script> -->
+    <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
     <!-- CSS FILE -->
     <link rel="stylesheet" type = "text/css" href="css/style.css">
