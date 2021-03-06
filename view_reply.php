@@ -9,6 +9,7 @@
     <center><h4>Reply</h4></center>
     <br>
     <?php
+      session_start();
       $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
 
       $query1 = "select * from users where email = '$_SESSION[email]'";

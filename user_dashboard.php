@@ -16,6 +16,23 @@
 		}
 
 	}
+
+	if(isset($_POST['send_query'])){
+		$connection = mysqli_connect("localhost", "root", "", "online_notice_system");
+		$query = "insert into help values(null, '$_SESSION[email]', '$_POST[title]', '$_POST[message]', '$_POST[date]')";
+		$query_run = mysqli_query($connection, $query);
+
+		if($query_run){
+			echo "<script type = 'text/javascript'>
+			alert('Query Posted');
+			window.location.href = 'user_dashboard.php'
+			</script>";
+		}else{
+			echo "<script type = 'text/javascript'>alert('Failed, Try Again'); window.location.href = 'user_dashboard.php'</script>";
+		}
+
+	}
+
  ?>
 
 
@@ -30,7 +47,7 @@
 		<script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
-		<link rel="stylesheet" type = "text/css" href="css/style.css">
+		<link rel="stylesheet" type = "text/css" href="css/style1.css">
 
 
 		<script type="text/javascript">
@@ -47,7 +64,11 @@
           $("#main_content").load('view_reply.php');
         });
 
-				// $("#reply_button").click(function(){
+				$("#view-help-button").click(function(){
+          $("#main_content").load('help_support.php');
+        });
+
+				// $("#reply-button").click(function(){
         //   $("#main_content").load('reply.php');
         // });
 
@@ -63,7 +84,7 @@
 
 			</div>
 			<div class="col-md-4">
-				<h3>Online Notice Board System</h3>
+				<center><img src="images/online notice board 2.png" style="width:400px;height:100px;"></img></center>
 			</div>
 			<div class="col-md-4">
 
@@ -77,19 +98,29 @@
 			<div class="row">
 				<div class="col-md-2" id = "left_sidebar">
 
+					<center><h4>User Dashboard</h4></center>
 					<img src="images/img1.jpg" class="img-rounded" alt="Image_user" height="200px" width="200px"><br>
 					<b> <?php echo $_SESSION['email']; ?></b><hr>
 					<button type="button" class="btn btn-primary btn-block" id="edit-profile-button" name="edit">Edit Profile</button>
 					<button type="button" class="btn btn-primary btn-block" id="view-notice-button" name="view">View Notice</button>
 					<button type="button" class="btn btn-primary btn-block" id="view-reply-button" name="reply">View Reply</button>
+					<button type="button" class="btn btn-primary btn-block" id="view-help-button" name="help">Help and Support</button>
 					<a href="logout.php" type="button" class="btn btn-success btn-block">Logout</a>
 
 				</div>
-				<div class="col-md-8" id="main_content">
-					<h2>User Dashboard</h2>
-					<p>Hey There! This is your own Dashboard.</p>
-					<p>Hey There! This is your own Dashboard.</p>
-					<p>Hey There! This is your own Dashboard.</p>
+				<div class="col-md-7" id="main_content">
+					<center><h2>About Us</h2></center>
+					<p></p>
+					<p>Help and Support</p>
+					<p>Session destroy in some page</p>
+					<p>Profile pic</p>
+					<p>Reply title error solve</p>
+
+				</div>
+				<div class="col-md-3" id = "right_sidebar">
+					<center><h2>Time Table</h2></center>
+					<p>Time Tabel</p>
+					<p>Event Creation</p>
 				</div>
 
 			</div>

@@ -9,7 +9,7 @@
     $branch = $row['branch'];
   }
 
-  $query1 = "select * from notice where branch = '$branch'";
+  $query1 = "select * from notice where branch = '$branch' or branch = 'All'";
   $query_run1 = mysqli_query($connection, $query1);
 
   while($row = mysqli_fetch_assoc($query_run1)){
@@ -43,14 +43,28 @@
 		<script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
-		<link rel="stylesheet" type = "text/css" href="css/style.css">
+		<link rel="stylesheet" type = "text/css" href="css/style1.css">
 
 
   </head>
   <body>
-    <div id="header">
-      <center><h4>Reply to Notice</h4></center>
-    </div>
+
+    <!-- Header -->
+		<div class="row" id = "header">
+			<div class="col-md-4">
+
+			</div>
+			<div class="col-md-4">
+				<center><img src="images/online notice board 2.png" style="width:400px;height:100px;"></img></center>
+			</div>
+			<div class="col-md-4">
+
+			</div>
+
+		</div>
+
+    <center><h4>Reply to Notice</h4></center>
+    
 
     <br>
     <div>

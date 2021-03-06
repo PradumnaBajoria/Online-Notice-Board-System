@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
 
-				$("#reply_button").click(function(){
+				$("#reply-button").click(function(){
           $("#main_content").load('reply.php');
         });
 
       });
-    </script>
+    </script> -->
 
   </head>
   <body>
@@ -31,7 +31,7 @@
             <br>
             <h6 class="card-subtitle">To : <?php echo $row['branch']; ?></h6>
             <h6 class="card-subtitle">Date : <?php echo $row['post_date']; ?></h6>
-            <!-- <button type="button" class="btn btn-primary" id="reply_button" name="reply">Reply</button> -->
+            <!-- <button type="button" class="btn btn-primary" id="reply-button" name="reply">Reply</button> -->
             <a href="reply.php" type="button" class="btn btn-primary">Reply</a>
 
           </div>

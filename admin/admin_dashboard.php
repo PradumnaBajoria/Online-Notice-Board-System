@@ -20,7 +20,10 @@
 		$query_run = mysqli_query($connection, $query);
 
 		if($query_run){
-			echo "<script type = 'text/javascript'> alert('Notice Created'); window.location.href = 'admin_dashboard.php' </script>";
+			echo "<script type = 'text/javascript'>
+			alert('Notice Created');
+			window.location.href = 'admin_dashboard.php'
+			</script>";
 		}else{
 			echo "<script type = 'text/javascript'>alert('Notice Creation Failed'); window.location.href = 'admin_dashboard.php'</script>";
 		}
@@ -41,7 +44,7 @@
 		<script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
-		<link rel="stylesheet" type = "text/css" href="../css/style.css">
+		<link rel="stylesheet" type = "text/css" href="../css/style1.css">
 
 
 		<script type="text/javascript">
@@ -74,7 +77,7 @@
 
 			</div>
 			<div class="col-md-4">
-				<h3>Online Notice Board System</h3>
+				<center><img src="../images/online notice board 2.png" style="width:400px;height:100px;"></img></center>
 			</div>
 			<div class="col-md-4">
 

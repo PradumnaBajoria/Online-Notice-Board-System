@@ -1,0 +1,43 @@
+#header{
+  background-color: #e32620;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+#login_form{
+  padding-top: 75px;
+}
+
+#left_sidebar{
+  border-right: 2px solid black;
+}
+
+#right_sidebar{
+  border-left: 2px solid black;
+}
+
+
+#dashboard{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.inputWithIcon input[type=text]{
+  padding-left:40px;
+}
+
+.inputWithIcon input[type=password]{
+  padding-left:40px;
+}
+
+.inputWithIcon{
+  position:relative;
+}
+
+.inputWithIcon i{
+  position:absolute;
+  left:15px;
+  top:43px;
+  font-size:20px;
+}
