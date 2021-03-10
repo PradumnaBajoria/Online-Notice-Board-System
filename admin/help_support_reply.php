@@ -2,7 +2,7 @@
 
   session_start();
   $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
-  $query = "select * from help";
+  $query = "select * from help where email = '$_GET[q_email]' and title = '$_GET[q_title]'";
   $query_run = mysqli_query($connection, $query);
 
   while($row = mysqli_fetch_assoc($query_run)){

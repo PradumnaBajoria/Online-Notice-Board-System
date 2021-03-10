@@ -13,15 +13,8 @@
       session_start();
       $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
 
-      $query = "select * from help where email = '$_SESSION[email]'";
+      $query = "select * from help where email = '$_SESSION[email]' order by help_id desc";
       $query_run = mysqli_query($connection, $query);
-
-      // while($row = mysqli_fetch_assoc($query_run1)){
-      //   $branch = $row['branch'];
-      // }
-
-      // $query = "select * from reply where whom = '$branch' OR whom = 'ALL'";
-      // $query_run = mysqli_query($connection, $query);
 
       while ($row = mysqli_fetch_assoc($query_run)) {
         ?>

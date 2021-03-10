@@ -22,7 +22,7 @@
             <h6 class="card-subtitle">From : <?php echo $row['email']; ?></h6>
             <h6 class="card-subtitle">Date : <?php echo $row['date']; ?></h6>
             <!-- <button type="button" class="btn btn-warning" id="help-reply-button" name="help_reply">Reply</button> -->
-            <a href="help_support_reply.php" type="button" class="btn btn-danger">Reply</a>
+            <a href="help_support_reply.php?q_email=<?php echo $row['email'];?>&q_title=<?php echo $row['title'];?>" type="button" class="btn btn-danger">Reply</a>
           </div>
 
         </div>

@@ -19,7 +19,7 @@
         $branch = $row['branch'];
       }
 
-      $query = "select * from reply where whom = '$branch' OR whom = 'ALL'";
+      $query = "select * from reply where whom = '$branch' OR whom = 'ALL' order by reply_id desc";
       $query_run = mysqli_query($connection, $query);
 
       while ($row = mysqli_fetch_assoc($query_run)) {

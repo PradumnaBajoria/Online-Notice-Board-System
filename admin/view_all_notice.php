@@ -10,7 +10,7 @@
     <br>
     <?php
       $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
-      $query = "select * from notice";
+      $query = "select * from notice order by notice_id desc";
       $query_run = mysqli_query($connection, $query);
       while ($row = mysqli_fetch_assoc($query_run)) {
         ?>

@@ -20,7 +20,7 @@
     <?php
       session_start();
       $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
-      $query = "select * from notice where branch = 'All' OR branch = '$_SESSION[branch]'";
+      $query = "select * from notice where branch = 'All' OR branch = '$_SESSION[branch]' order by notice_id desc";
       $query_run = mysqli_query($connection, $query);
       while ($row = mysqli_fetch_assoc($query_run)) {
         ?>
@@ -32,7 +32,7 @@
             <h6 class="card-subtitle">To : <?php echo $row['branch']; ?></h6>
             <h6 class="card-subtitle">Date : <?php echo $row['post_date']; ?></h6>
             <!-- <button type="submit" class="btn btn-primary" name="reply">Reply</button> -->
-            <a href="reply.php" type="button" class="btn btn-primary">Reply</a>
+            <a href="reply.php?m_title=<?php echo $row['title'];?>" type="button" class="btn btn-primary">Reply</a>
 
           </div>
 

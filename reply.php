@@ -2,14 +2,14 @@
 
   session_start();
   $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
-  $query = "select * from users where email = '$_SESSION[email]' and title = ";
+  $query = "select * from users where email = '$_SESSION[email]'";
   $query_run = mysqli_query($connection, $query);
 
   while($row = mysqli_fetch_assoc($query_run)){
     $branch = $row['branch'];
   }
 
-  $query1 = "select * from notice where branch = '$branch' or branch = 'All'";
+  $query1 = "select * from notice where title = '$_GET[m_title]' and (branch = '$branch' or branch = 'All')";
   $query_run1 = mysqli_query($connection, $query1);
 
   while($row = mysqli_fetch_assoc($query_run1)){
