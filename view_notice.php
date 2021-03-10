@@ -31,7 +31,7 @@
             <br>
             <h6 class="card-subtitle">To : <?php echo $row['branch']; ?></h6>
             <h6 class="card-subtitle">Date : <?php echo $row['post_date']; ?></h6>
-            <!-- <button type="button" class="btn btn-primary" id="reply-button" name="reply">Reply</button> -->
+            <!-- <button type="submit" class="btn btn-primary" name="reply">Reply</button> -->
             <a href="reply.php" type="button" class="btn btn-primary">Reply</a>
 
           </div>

@@ -30,9 +30,8 @@
 		}else{
 			echo "<script type = 'text/javascript'>alert('Failed, Try Again'); window.location.href = 'user_dashboard.php'</script>";
 		}
-
 	}
-
+	
  ?>
 
 

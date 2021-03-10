@@ -2,7 +2,7 @@
 
   session_start();
   $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
-  $query = "select * from users where email = '$_SESSION[email]'";
+  $query = "select * from users where email = '$_SESSION[email]' and title = ";
   $query_run = mysqli_query($connection, $query);
 
   while($row = mysqli_fetch_assoc($query_run)){
@@ -64,7 +64,7 @@
 		</div>
 
     <center><h4>Reply to Notice</h4></center>
-    
+
 
     <br>
     <div>

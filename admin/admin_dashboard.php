@@ -30,6 +30,10 @@
 
 	}
 
+	if(isset($_POST['help_reply'])){
+		
+	}
+
  ?>
 
 
@@ -101,11 +105,16 @@
 					<a href="logout.php" type="button" class="btn btn-success btn-block">Logout</a>
 
 				</div>
-				<div class="col-md-8" id="main_content">
-					<h2>Admin Dashboard</h2>
-					<p>Hey There! This is your own Dashboard.</p>
-					<p>Hey There! This is your own Dashboard.</p>
-					<p>Hey There! This is your own Dashboard.</p>
+				<div class="col-md-7" id="main_content">
+
+					<script type="text/javascript">
+						$("#main_content").load('help_support.php');
+					</script>
+
+				</div>
+				<div class="col-md-3" id="right_sidebar">
+					<h2>Event Creation</h2>
+					<p>This is the event</p>
 				</div>
 
 			</div>

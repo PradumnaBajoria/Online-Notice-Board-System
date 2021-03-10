@@ -7,6 +7,39 @@
   <body>
     <center><h4>Help and Support</h4></center>
     <br>
+    <center><h5>Previous Queries</h5></center>
+
+    <?php
+      session_start();
+      $connection = mysqli_connect("localhost", "root", "", "online_notice_system");
+
+      $query = "select * from help where email = '$_SESSION[email]'";
+      $query_run = mysqli_query($connection, $query);
+
+      // while($row = mysqli_fetch_assoc($query_run1)){
+      //   $branch = $row['branch'];
+      // }
+
+      // $query = "select * from reply where whom = '$branch' OR whom = 'ALL'";
+      // $query_run = mysqli_query($connection, $query);
+
+      while ($row = mysqli_fetch_assoc($query_run)) {
+        ?>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $row['title']; ?></h5>
+            <p class="class-text">Query : <?php echo $row['message']; ?></p>
+            <p class="class-text">Reply : <?php echo $row['reply']; ?></p>
+            <br>
+          </div>
+
+        </div>
+        <?php
+      }
+
+     ?>
+
+    <center><h5>Ask New Queries</h5></center>
     <div>
       <form action="" method="post">
         <div class="form-group">
