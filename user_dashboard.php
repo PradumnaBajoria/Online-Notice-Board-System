@@ -117,9 +117,9 @@
 
 				</div>
 				<div class="col-md-3" id = "right_sidebar">
-					<center><h2>Events</h2></center>
-					<p>Time Tabel</p>
-					<p>Event Creation</p>
+					<script type="text/javascript">
+						$("#right_sidebar").load('admin/view_event.php');
+					</script>
 				</div>
 
 			</div>

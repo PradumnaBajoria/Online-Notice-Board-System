@@ -100,6 +100,7 @@
 			</div>
 			<div class="col-md-4">
 				<center><img src="../images/online notice board 2.png" style="width:400px;height:100px;"></img></center>
+				<center><h4>Admin Dashboard</h4></center>
 			</div>
 			<div class="col-md-4">
 
@@ -131,12 +132,15 @@
 
 				</div>
 				<div class="col-md-3" id="right_sidebar">
-					<center><h2>Event Creation</h2></center>
-					<button type="button" class="btn btn-success btn-block" id="event-create-button" name="event">Create Event</button>
-
-					<!-- <script type="text/javascript">
-						$("#right_sidebar").load('help_support.php');
-					</script> -->
+					<div class="">
+						<center><h2>Event Creation</h2></center>
+						<button type="button" class="btn btn-success btn-block" id="event-create-button" name="event">Create Event</button>
+					</div>
+					<div id="event_show">
+						<script type="text/javascript">
+							$("#event_show").load('view_event.php');
+						</script>
+					</div>
 
 				</div>
 
