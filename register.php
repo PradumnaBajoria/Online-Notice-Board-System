@@ -34,11 +34,11 @@
           <form action="register.php" method="post">
             <div class="form-group">
               <label>First Name : </label>
-              <input class="form-control" type = "text" name = "fname" placeholder = "Enter Your First Name">
+              <input class="form-control" type = "text" name = "fname" placeholder = "Enter Your First Name" required>
             </div>
             <div class="form-group">
               <label>Last Name : </label>
-              <input class="form-control" type = "text" name = "lname" placeholder = "Enter Your Last Name">
+              <input class="form-control" type = "text" name = "lname" placeholder = "Enter Your Last Name" required>
             </div>
             <div class="form-group">
               <label>Branch : </label>
@@ -54,11 +54,11 @@
             </div>
             <div class="form-group">
               <label>Email Id : </label>
-              <input class="form-control" type = "text" name = "email" placeholder = "Enter Your Email">
+              <input class="form-control" type = "text" name = "email" placeholder = "Enter Your Email" required>
             </div>
             <div class="form-group">
               <label>Password : </label>
-              <input class="form-control" type = "password" name = "password" placeholder = "Enter Your Password">
+              <input class="form-control" type = "password" name = "password" placeholder = "Enter Your Password" required>
             </div>
 
             <button class = "btn btn-primary" type="submit" name="register">Register</button>

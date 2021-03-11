@@ -19,7 +19,7 @@
 
 	if(isset($_POST['send_query'])){
 		$connection = mysqli_connect("localhost", "root", "", "online_notice_system");
-		$query = "insert into help values(null, '$_SESSION[email]', '$_POST[title]', '$_POST[message]', '$_POST[date]')";
+		$query = "insert into help values(null, '$_SESSION[email]', '$_POST[title]', '$_POST[message]', '$_POST[date]', 'No Reply Yet')";
 		$query_run = mysqli_query($connection, $query);
 
 		if($query_run){
