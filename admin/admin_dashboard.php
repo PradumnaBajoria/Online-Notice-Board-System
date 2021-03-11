@@ -27,12 +27,26 @@
 		}else{
 			echo "<script type = 'text/javascript'>alert('Notice Creation Failed'); window.location.href = 'admin_dashboard.php'</script>";
 		}
-
 	}
 
-	if(isset($_POST['help_reply'])){
-		
+	if(isset($_POST['create_event'])){
+		$connection = mysqli_connect("localhost", "root", "", "online_notice_system");
+		$query = "insert into event values(null, '$_POST[event_date]', '$_POST[event_name]')";
+		$query_run = mysqli_query($connection, $query);
+
+		if($query_run){
+			echo "<script type = 'text/javascript'>
+			alert('Event Created');
+			window.location.href = 'admin_dashboard.php'
+			</script>";
+		}else{
+			echo "<script type = 'text/javascript'>alert('Notice Creation Failed'); window.location.href = 'admin_dashboard.php'</script>";
+		}
 	}
+
+	// if(isset($_POST['help_reply'])){
+	//
+	// }
 
  ?>
 
@@ -67,6 +81,10 @@
 
 				$("#view-reply-button").click(function(){
           $("#main_content").load('view_all_reply.php');
+        });
+
+				$("#event-create-button").click(function(){
+          $("#main_content").load('create_event.php');
         });
 
       });
@@ -113,8 +131,13 @@
 
 				</div>
 				<div class="col-md-3" id="right_sidebar">
-					<h2>Event Creation</h2>
-					<p>This is the event</p>
+					<center><h2>Event Creation</h2></center>
+					<button type="button" class="btn btn-success btn-block" id="event-create-button" name="event">Create Event</button>
+
+					<!-- <script type="text/javascript">
+						$("#right_sidebar").load('help_support.php');
+					</script> -->
+
 				</div>
 
 			</div>

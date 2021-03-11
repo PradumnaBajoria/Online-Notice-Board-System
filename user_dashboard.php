@@ -31,7 +31,7 @@
 			echo "<script type = 'text/javascript'>alert('Failed, Try Again'); window.location.href = 'user_dashboard.php'</script>";
 		}
 	}
-	
+
  ?>
 
 
@@ -117,7 +117,7 @@
 
 				</div>
 				<div class="col-md-3" id = "right_sidebar">
-					<center><h2>Time Table</h2></center>
+					<center><h2>Events</h2></center>
 					<p>Time Tabel</p>
 					<p>Event Creation</p>
 				</div>
