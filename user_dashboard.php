@@ -3,7 +3,7 @@
 	session_start();
 	if(isset($_POST['update_profile'])){
 		$connection = mysqli_connect("localhost", "root", "", "online_notice_system");
-		$query = "update users set fname = '$_POST[fname]', lname = '$_POST[lname]', branch = '$_POST[branch]', email = '$_POST[email]', password = '$_POST[password]' where email = '$_SESSION[email]'";
+		$query = "update users set password = '$_POST[password]' where email = '$_SESSION[email]'";
 		$query_run = mysqli_query($connection, $query);
 
 		if($query_run){
@@ -46,8 +46,8 @@
 		<script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
-		<link rel="stylesheet" type = "text/css" href="css/style1.css">
-
+		<link rel="stylesheet" type = "text/css" href="css/style2.css">
+		<link rel="stylesheet" type = "text/css" href="css/style.css">
 
 		<script type="text/javascript">
       $(document).ready(function(){
@@ -75,8 +75,7 @@
     </script>
 
 	</head>
-	<body>
-
+	<body style="background-image: url('images/bg2.jpg');">
 		<!-- Header -->
 		<div class="row" id = "header">
 			<div class="col-md-4">

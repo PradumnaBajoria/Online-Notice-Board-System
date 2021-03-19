@@ -1,0 +1,126 @@
+/*
+#header{
+  background-color: #e32620;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+*/
+#header
+{
+  background-color: #f7433e;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  /*box-shadow: 0 5px 15px rgba(0,0,0,.1);*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+#header:hover
+{
+  box-shadow: 0 0 11px rgb(56,56,56); 
+}
+
+#login_form
+{
+  padding-top: 75px;
+}
+
+#left_sidebar
+{
+  /*border-right: 2px solid black;*/
+  width: 90%;
+  height: auto;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: content-box;
+  margin: auto;
+  border-radius: 4px;
+  position: absolute;
+  left: 10px
+}
+
+#left_sidebar:hover
+{
+  box-shadow: 0 0 11px rgb(56,56,56); 
+}
+
+#right_sidebar
+{
+  /*border-left: 2px solid black;*/
+  width: 237px;
+  height: auto;
+  padding: 15px;
+  background-color: #f7f177;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: content-box;
+  margin: auto;
+  border-radius: 4px;
+  position: absolute;
+  right: 10px;
+}
+
+#right_sidebar:hover
+{
+  box-shadow: 0 0 11px rgb(56,56,56); 
+}
+
+#main_content
+{
+  width: 95%;
+  height: auto;
+  padding: 15px;
+  background-color: #dee3e3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: content-box;
+  margin: auto;
+  border-radius: 4px;
+  position: relative;
+}
+
+#main_content:hover
+{
+  box-shadow: 0 0 11px rgb(56,56,56);
+}
+
+#logoutButton
+{
+  color: #505050
+}
+
+#dashboard
+{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.inputWithIcon input[type=text]
+{
+  padding-left:40px;
+}
+
+.inputWithIcon input[type=password]
+{
+  padding-left:40px;
+}
+
+.inputWithIcon
+{
+  position:relative;
+}
+
+.inputWithIcon i
+{
+  position:absolute;
+  left:15px;
+  top:43px;
+  font-size:20px;
+}

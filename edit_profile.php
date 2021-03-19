@@ -32,15 +32,16 @@
      <form action="" method="post">
        <div class="form-group">
          <label>First Name : </label>
-         <input type="text" class="form-control" name="fname" value="<?php echo $fname; ?>">
+         <input type="text" class="form-control" name="fname" value="<?php echo $fname; ?>" disabled>
        </div>
        <div class="form-group">
          <label>Last Name : </label>
-         <input type="text" class="form-control" name="lname" value="<?php echo $lname; ?>">
+         <input type="text" class="form-control" name="lname" value="<?php echo $lname; ?>" disabled>
        </div>
        <div class="form-group">
          <label>Branch : </label>
-         <select class="form-control" name="branch" required>
+         <input type="text" class="form-control" name="branch" value="<?php echo $branch; ?>" disabled>
+         <!--<select class="form-control" name="branch" dis>
            <option value="Computer Science">Computer Science</option>
            <option value="Electronics">Electronics</option>
            <option value="Mechanical">Mechanical</option>
@@ -48,11 +49,11 @@
            <option value="Civil">Civil</option>
            <option value="Chemical">Chemical</option>
 
-         </select>
+         </select>-->
        </div>
        <div class="form-group">
          <label>Email : </label>
-         <input type="email" class="form-control" name="email" value="<?php echo $email; ?>">
+         <input type="email" class="form-control" name="email" value="<?php echo $email; ?>" disabled>
        </div>
        <div class="form-group">
          <label>Password : </label>
