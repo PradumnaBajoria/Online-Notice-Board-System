@@ -62,6 +62,7 @@
 		<script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
+		<link rel="stylesheet" type = "text/css" href="../css/style.css">
 		<link rel="stylesheet" type = "text/css" href="../css/style4.css">
 
 
@@ -113,13 +114,13 @@
 
 			<div class="row">
 				<div class="col-md-2" id = "left_sidebar">
-
+					<center><h4>Admin Dashboard</h4></center>
 					<img src="../images/img1.jpg" class="img-rounded" alt="Image_admin" height="200px" width="200px"><br>
 					<b> <?php echo $_SESSION['email']; ?></b><hr>
 					<button type="button" class="btn btn-primary btn-block" id="edit-profile-button" name="edit">Edit Profile</button>
-          <button type="button" class="btn btn-secondary btn-block" id="create-notice-button" name="edit">Create Notice</button>
+          <button type="button" class="btn btn-primary btn-block" id="create-notice-button" name="edit">Create Notice</button>
           <button type="button" class="btn btn-primary btn-block" id="view-notice-button" name="view">View All Notice</button>
-          <button type="button" class="btn btn-secondary btn-block" id="view-reply-button" name="reply">View All Reply</button>
+          <button type="button" class="btn btn-primary btn-block" id="view-reply-button" name="reply">View All Reply</button>
 
 					<a href="logout.php" type="button" class="btn btn-success btn-block">Logout</a>
 
