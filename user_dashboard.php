@@ -46,8 +46,9 @@
 		<script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
-		<link rel="stylesheet" type = "text/css" href="css/style2.css">
 		<link rel="stylesheet" type = "text/css" href="css/style.css">
+		<link rel="stylesheet" type = "text/css" href="css/style4.css">
+
 
 		<script type="text/javascript">
       $(document).ready(function(){
@@ -106,13 +107,12 @@
 					<a href="logout.php" type="button" class="btn btn-success btn-block">Logout</a>
 
 				</div>
-				<div class="col-md-7" id="main_content">
+				<div class="col-md-7 main" id="main_content">
 					<center><h2>About Us</h2></center>
 					<p></p>
-					<p>Help and Support</p>
-					<p>Session destroy in some page</p>
-					<p>Profile pic</p>
-					<p>Reply title error solve</p>
+					<p>This is your dashboard</p>
+
+
 
 				</div>
 				<div class="col-md-3" id = "right_sidebar">
@@ -124,7 +124,6 @@
 			</div>
 
 		</section>
-
 
 
 	</body>

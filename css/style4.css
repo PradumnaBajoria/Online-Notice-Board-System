@@ -45,7 +45,7 @@
   margin: auto;
   border-radius: 4px;
   position: absolute;
-  left: 10px
+  left: 10px;
 }
 
 #left_sidebar:hover
@@ -57,7 +57,7 @@
 {
   /*border-left: 2px solid black;*/
   width: 237px;
-  height: auto;
+  height: 514px;
   padding: 15px;
   background-color: #f7f177;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -66,6 +66,12 @@
   border-radius: 4px;
   position: absolute;
   right: 10px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#right_sidebar::-webkit-scrollbar{
+  display: none;
 }
 
 #right_sidebar:hover
@@ -76,7 +82,7 @@
 #main_content
 {
   width: 95%;
-  height: auto;
+  height: 514px;
   padding: 15px;
   background-color: #dee3e3;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -84,6 +90,14 @@
   margin: auto;
   border-radius: 4px;
   position: relative;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-size: large;
+}
+
+#main_content::-webkit-scrollbar{
+  display: none;
 }
 
 #main_content:hover

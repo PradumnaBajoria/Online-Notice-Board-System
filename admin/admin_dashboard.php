@@ -62,7 +62,7 @@
 		<script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
-		<link rel="stylesheet" type = "text/css" href="../css/style2.css">
+		<link rel="stylesheet" type = "text/css" href="../css/style4.css">
 
 
 		<script type="text/javascript">
