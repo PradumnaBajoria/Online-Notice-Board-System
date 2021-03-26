@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 
 	</head>
 	<body>
@@ -36,7 +36,7 @@
 	              				<input type="password" name="password" class="form-control rounded-left" placeholder="Enter Your Password" required>
 	            			</div>
 	            			<div class="form-group">
-	            				<button type="submit" name="login" class="form-control btn btn-primary rounded submit px-3">Login</button>
+	            				<button type="submit" name="login" class="form-control btn btn-primary submit px-3">Login</button>
 	            			</div>
 	            			<div class="form-group d-md-flex">
 	            				<div class="w-50">

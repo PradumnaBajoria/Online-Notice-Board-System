@@ -39,15 +39,16 @@
     <meta charset="utf-8">
     <title>Reply to Notice</title>
     <script src="jQuery/jquery_latest.js" charset="utf-8"></script>
-		<link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css"> -->
 		<script src="bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
 		<link rel="stylesheet" type = "text/css" href="css/style1.css">
+    <link rel="stylesheet" type = "text/css" href="css/bootstrap.min.css">
 
 
   </head>
-  <body>
+  <body style="background-image: url('images/bg2.jpg');">
 
     <!-- Header -->
 		<div class="row" id = "header">
@@ -68,7 +69,7 @@
 
     <br>
     <div>
-      <form action="" method="post">
+      <form action="" method="post" id="reply_form_id">
         <div class="form-group">
           <label>Reply to : </label>
           <select class="form-control" name="whom" required>

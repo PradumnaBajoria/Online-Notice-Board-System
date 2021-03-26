@@ -6,6 +6,16 @@
   text-align: center;
 }
 */
+
+body{
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+
 #header
 {
   background-color: #f7433e;
@@ -25,7 +35,7 @@
 
 #header:hover
 {
-  box-shadow: 0 0 11px rgb(56,56,56); 
+  box-shadow: 0 0 11px rgb(56,56,56);
 }
 
 #login_form
@@ -45,12 +55,12 @@
   margin: auto;
   border-radius: 4px;
   position: absolute;
-  left: 10px;
+  left: 10px
 }
 
 #left_sidebar:hover
 {
-  box-shadow: 0 0 11px rgb(56,56,56); 
+  box-shadow: 0 0 11px rgb(56,56,56);
 }
 
 #right_sidebar
@@ -70,13 +80,14 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 #right_sidebar::-webkit-scrollbar{
   display: none;
 }
 
 #right_sidebar:hover
 {
-  box-shadow: 0 0 11px rgb(56,56,56); 
+  box-shadow: 0 0 11px rgb(56,56,56);
 }
 
 #main_content
@@ -101,6 +112,24 @@
 }
 
 #main_content:hover
+{
+  box-shadow: 0 0 11px rgb(56,56,56);
+}
+
+#reply_form_id
+{
+  width: 95%;
+  height: auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-sizing: content-box;
+  margin: auto;
+  border-radius: 4px;
+  position: relative;
+}
+
+#reply_form_id:hover
 {
   box-shadow: 0 0 11px rgb(56,56,56);
 }

@@ -58,12 +58,11 @@
 		<title>Admin Dashboard</title>
 		<!-- Bootstrap file -->
 		<script src="../jQuery/jquery_latest.js" charset="utf-8"></script>
-		<link rel="stylesheet" href="../bootstrap-4.6.0-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js" charset="utf-8"></script>
 
 		<!-- CSS File -->
-		<link rel="stylesheet" type = "text/css" href="../css/style.css">
-		<link rel="stylesheet" type = "text/css" href="../css/style4.css">
+		<link rel="stylesheet" type = "text/css" href="../css/style1.css">
 
 
 		<script type="text/javascript">
